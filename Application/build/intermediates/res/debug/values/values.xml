@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/C:/apps/cafedemo/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/res/values/values.xml -->
+    <eat-comment />
+
+    <color name="cardview_dark_background">#FF202020</color>
+    <color name="cardview_light_background">#FFFAFAFA</color>
+    <color name="cardview_shadow_end_color">#03000000</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
+
+    <declare-styleable name="CardView">
+
+        <!-- Background color for CardView. -->
+        <attr name="cardBackgroundColor" format="color" />
+        <!-- Corner radius for CardView. -->
+        <attr name="cardCornerRadius" format="dimension" />
+        <!-- Elevation for CardView. -->
+        <attr name="cardElevation" format="dimension" />
+        <!-- Maximum Elevation for CardView. -->
+        <attr name="cardMaxElevation" format="dimension" />
+        <!-- Add padding in API v21+ as well to have the same measurements with previous versions. -->
+        <attr name="cardUseCompatPadding" format="boolean" />
+        <!-- Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. -->
+        <attr name="cardPreventCornerOverlap" format="boolean" />
+        <!-- Inner padding between the edges of the Card and children of the CardView. -->
+        <attr name="contentPadding" format="dimension" />
+        <!-- Inner padding between the left edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingLeft" format="dimension" />
+        <!-- Inner padding between the right edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingRight" format="dimension" />
+        <!-- Inner padding between the top edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingTop" format="dimension" />
+        <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingBottom" format="dimension" />
+    </declare-styleable>
+
+    <dimen name="cardview_compat_inset_shadow">1dp</dimen>
+    <dimen name="cardview_default_elevation">2dp</dimen>
+    <dimen name="cardview_default_radius">2dp</dimen>
+    <!-- From: file:/C:/apps/cafedemo/Application/src/main/res/values/template-dimens.xml -->
+    <eat-comment />
+
+    <dimen name="horizontal_page_margin">@dimen/margin_medium</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
+    <!-- From: file:/C:/apps/cafedemo/Application/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="account_number">Account Number</string>
+    <!-- From: file:/C:/apps/cafedemo/Application/src/main/res/values/base-strings.xml -->
+    <eat-comment />
+
+    <string name="app_name">CardReader</string>
+    <!-- From: file:/C:/apps/cafedemo/Application/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="card_title">Sample Loyalty Card</string>
+    <!-- From: file:/C:/apps/cafedemo/Application/src/main/res/values/base-strings.xml -->
+    <eat-comment />
+
+    <string name="intro_message">
+<![CDATA[
+        
+            
+            This sample demonstrates how to implement a low-level NFC card reader, for reading cards
+            that do not contain NDEF or Android Beam data. This sample is designed to read the virtual
+            loyalty card implemented in the "CardEmulation" sample.\n\n
+
+            In particular, this sample demonstrates how to disable Android Beam, select which AIDs the
+            reader is interested, and establish communication with the card
+            
+        
+        ]]>
+    </string>
+    <!-- From: file:/C:/apps/cafedemo/Application/src/main/res/values/fragmentview_strings.xml -->
+    <eat-comment />
+
+    <string name="sample_hide_log">Hide Log</string>
+    <string name="sample_show_log">Show Log</string>
+    <!-- From: file:/C:/apps/cafedemo/Application/src/main/res/values/template-styles.xml -->
+    <eat-comment />
+
+    <style name="AppTheme" parent="Theme.Sample" />
+
+    <style name="ButtonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">5</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+    <!-- From: file:/C:/apps/cafedemo/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/res/values/values.xml -->
+    <eat-comment />
+
+    <style name="CardView">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+        <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
+        <item name="cardElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardMaxElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+    <style name="CardView.Dark">
+        <item name="cardBackgroundColor">@color/cardview_dark_background</item>
+    </style>
+
+    <style name="CardView.Light">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+    <!-- From: file:/C:/apps/cafedemo/Application/src/main/res/values/template-styles.xml -->
+    <eat-comment />
+
+    <style name="Theme.Base" parent="android:Theme.Light" />
+
+    <style name="Theme.Sample" parent="Theme.Base" />
+
+    <style name="Widget" />
+
+    <style name="Widget.SampleMessage">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
+
+    <style name="Widget.SampleMessageTile">
+        <item name="android:background">@drawable/tile</item>
+        <item name="android:shadowColor">#7F000000</item>
+        <item name="android:shadowDy">-3.5</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="btnStyleOrange" parent="@android:style/Widget.Button">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.6</item>
+        <item name="android:background">@drawable/btn_orange</item>
+        <item name="android:padding">10dip</item>
+    </style>
+
+    <style name="btnStyleSeagull" parent="@android:style/Widget.Button">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#626954</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:background">@drawable/btn_seagull</item>
+        <item name="android:padding">10dip</item>
+    </style>
+
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\apps\CardReader\Application\build\intermediates\pre-dexed\debug\classes-4350c22587d81c56a7e68153d58deaf78bea0de0.jar"
+        jar="C:\apps\CardReader\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+    <item
+        dex="C:\apps\CardReader\Application\build\intermediates\pre-dexed\debug\classes-ffdf3a1ab3586e5370df2a6e70b667c6835a65b9.jar"
+        jar="C:\apps\CardReader\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34"/>
+    <item
+        dex="C:\apps\cafedemo\Application\build\intermediates\pre-dexed\debug\classes-fa966c00c445bf1ab184322160260ad50a6bf355.jar"
+        jar="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34"/>
+    <item
+        dex="C:\apps\cafedemo\Application\build\intermediates\pre-dexed\debug\classes-fe2dab01c4895dabf6cd3adeb296af633d926193.jar"
+        jar="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+    <item
+        dex="C:\apps\cafedemo\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-26f55122f5af9fcce497cd12eed9b8b6aae8ebc4.jar"
+        jar="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+    <item
+        dex="C:\apps\CardReader\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-a386afa254c087bc559ca38d1e206a238fa84f18.jar"
+        jar="C:\apps\CardReader\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+    <item
+        dex="C:\apps\cafedemo\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-c6c2f3e5ce5df81ee29cb0f970b152a602288fa7.jar"
+        jar="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="5a8e01742aee890c56fe638ea7c921b91a3fdc62"/>
+    <item
+        dex="C:\apps\CardReader\Application\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-00d7e8ec54921d35265175b61695e65186ff570a.jar"
+        jar="C:\Program Files\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
+    <item
+        dex="C:\apps\CardReader\Application\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-fcdf1ee860d9bf33fe76278462c7b10cfada1da7.jar"
+        jar="C:\apps\CardReader\Application\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\libs\internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="5a8e01742aee890c56fe638ea7c921b91a3fdc62"/>
+    <item
+        dex="C:\apps\cafedemo\Application\build\intermediates\pre-dexed\debug\classes-d57766f04ff2a9fe7137b173f4c2c6e6d452da4a.jar"
+        jar="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="0c0c19759e5868604a3b4c2c0074ee9404d73c76"/>
+    <item
+        dex="C:\apps\CardReader\Application\build\intermediates\pre-dexed\debug\classes-2e07fd9cad87b2c32ca13ca9d0bf5d7927b1d0ed.jar"
+        jar="C:\apps\CardReader\Application\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.0.0"
+        sha1="0c0c19759e5868604a3b4c2c0074ee9404d73c76"/>
+
+</pre-dex-items>

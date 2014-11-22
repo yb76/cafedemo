@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cc_guide_generic" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/top_bar_bg_h" >
+
+        <TextView
+            android:id="@+id/tv_idle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="IDLE"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        android:layout_weight="1.0"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="top|center_horizontal">
+
+        <Button
+            style="@style/ButtonText"
+            android:id="@+id/btn_idle_ic"
+            android:background="@drawable/btn_blue"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:text="Issue Card"
+            android:layout_alignParentLeft="true"
+            android:textSize="25sp"
+            android:onClick="onClick" />
+
+        <Button
+            style="@style/ButtonText"
+            android:id="@+id/btn_idle_deposit"
+            android:background="@drawable/btn_blue"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:text="Deposit"
+            android:layout_alignParentRight="true"
+            android:textSize="25sp"
+            android:onClick="onClick" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:layout_gravity="top|center_horizontal">
+
+        <Button
+            style="@style/ButtonText"
+            android:id="@+id/btn_idle_purchase"
+            android:background="@drawable/btn_blue"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:text="Purchase"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="25sp"
+            android:onClick="onClick" />
+
+        <Button
+            style="@style/ButtonText"
+            android:id="@+id/btn_idle_balance"
+            android:background="@drawable/btn_blue"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:text="Balance"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="25sp"
+            android:onClick="onClick" />
+
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/C:/apps/cafedemo/Application/src/main/res/layout/activity_idle.xml -->
