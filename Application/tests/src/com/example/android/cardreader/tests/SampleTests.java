@@ -40,13 +40,13 @@ import android.test.ActivityInstrumentationTestCase2;
 /**
 * Tests for CardReader sample.
 */
-public class SampleTests extends ActivityInstrumentationTestCase2<MainActivity> {
+public class SampleTests extends ActivityInstrumentationTestCase2<TapcardActivity> {
 
-    private MainActivity mTestActivity;
+    private TapcardActivity mTestActivity;
     private CardReaderFragment mTestFragment;
 
     public SampleTests() {
-        super(MainActivity.class);
+        super(TapcardActivity.class);
     }
 
     @Override

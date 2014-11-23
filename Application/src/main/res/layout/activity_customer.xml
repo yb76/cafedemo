@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blue_man"
     android:orientation="vertical" >
     
     <RelativeLayout
@@ -15,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="customer"
+            android:text="SIGN UP"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -23,26 +24,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_weight="1.0" >
 
-        <TextView
+        <EditText
+            android:id="@+id/tv_customer_fname"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="First Name"
+            android:inputType="text"
+            android:maxLength="50"
+            android:textSize="25sp" />
+        <EditText
+            android:id="@+id/tv_customer_lname"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Last Name"
+            android:inputType="text"
+            android:maxLength="50"
+            android:textSize="25sp" />
+
+        <EditText
             android:id="@+id/tv_customer_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.0" >
-        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Email"
+            android:maxLength="50"
+            android:inputType="textEmailAddress"
+            android:textSize="25sp" />
+        <EditText
             android:id="@+id/tv_customer_Mobile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mobile number"
-            android:textSize="18sp" />
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Mobile"
+            android:inputType="phone"
+            android:maxLength="20"
+            android:textSize="25sp" />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,24 +68,18 @@
         android:layout_weight="1.0"
         android:gravity="center" >
         <Button
+            style="@style/ButtonText"
+            android:background="@drawable/btn_blue"
+            android:layout_alignParentRight="true"
             android:id="@+id/btn_customer_save"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:text="Save"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:textSize="18sp"
+            android:textSize="30sp"
             android:onClick="onClick" />
         
-        <Button
-            android:id="@+id/btn_customer_cancel"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="Cancel"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:textSize="18sp"
-            android:onClick="onClick" />
     </LinearLayout>
     
 </LinearLayout>

@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 23.0.5">
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="            s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                              ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="78"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="90"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="100"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="110"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="120"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="130"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="141"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="151"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="162"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="173"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use String.format(Locale, ...) instead"
+        category="Correctness"
+        priority="6"
+        summary="Finds calls to locale-ambiguous `String` manipulation methods"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="                    s_dollar = String.format(&quot;%d&quot;, lval_d);"
+        errorLine2="                                      ~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="184"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="ShowToast"
+        severity="Warning"
+        message="Expected duration Toast.LENGTH_SHORT or Toast.LENGTH_LONG, a custom duration value is not supported"
+        category="Correctness"
+        priority="6"
+        summary="Looks for code creating a `Toast` but forgetting to call `show()` on it"
+        explanation="`Toast.makeText()` creates a `Toast` but does *not* show it. You must call `show()` on the resulting object to actually make the `Toast` appear."
+        errorLine1="  Toast.makeText(this, str, 100).show();"
+        errorLine2="                            ~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\AmountActivity.java"
+            line="202"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="Old buildToolsVersion; recommended version is 21.0.2 or later"
+        category="Correctness"
+        priority="4"
+        summary="Looks for old or obsolete Gradle library dependencies"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    buildToolsVersion &quot;21.0.0&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\build.gradle"
+            line="32"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ExtraText"
+        severity="Warning"
+        message="Unexpected text found in layout file: &quot;>&quot;"
+        category="Correctness"
+        priority="3"
+        summary="Looks for extraneous text in resource files"
+        explanation="Layout resource files should only contain elements and attributes. Any XML text content found in the file is likely accidental (and potentially dangerous if the text resembles XML and the developer believes the text to be functional)"
+        errorLine1="    "
+        errorLine2="    ^">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;45dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="284"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;45dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="294"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;35dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="305"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;45dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_balance.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;45dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_balance.xml"
+            line="50"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;32dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\main_fragment.xml"
+            line="41"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;18dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\main_fragment.xml"
+            line="50"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="            android:textSize=&quot;42dp&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\main_fragment.xml"
+            line="60"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SpUsage"
+        severity="Warning"
+        message="Should use &quot;sp&quot; instead of &quot;dp&quot; for text sizes"
+        category="Correctness"
+        priority="3"
+        summary="Looks for uses of `dp` instead of `sp` dimensions for text sizes"
+        explanation="When setting text sizes, you should normally use `sp`, or &quot;scale-independent pixels&quot;. This is like the `dp` unit, but it is also scaled by the user&apos;s font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user&apos;s preference.
+
+There *are* cases where you might need to use `dp`; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user&apos;s font size settings are not respected, so consider adjusting the layout itself to be more flexible."
+        url="http://developer.android.com/training/multiscreen/screendensities.html"
+        urls="http://developer.android.com/training/multiscreen/screendensities.html"
+        errorLine1="        &lt;item name=&quot;android:textSize&quot;>30dp&lt;/item>"
+        errorLine2="                                      ^">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\values\template-styles.xml"
+            line="72"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentLeft"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_centerInParent"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_centerInParent=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentRight"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="71"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentLeft"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="94"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_centerInParent"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_centerInParent=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="116"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentRight"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="131"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentLeft"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="154"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_centerInParent"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_centerInParent=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="176"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentRight"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="191"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentLeft"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentLeft=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="215"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_centerInParent"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_centerInParent=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="234"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentRight"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="252"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        severity="Warning"
+        message="Invalid layout param in a LinearLayout: layout_alignParentRight"
+        category="Performance"
+        priority="6"
+        summary="Looks for layout params that are not valid for the given parent layout"
+        explanation="The given layout_param is not defined for the given layout, meaning it has no effect. This usually happens when you change the parent layout or move view code around without updating the layout params. This will cause useless attribute processing at runtime, and is misleading for others reading the layout so the parameter should be removed."
+        errorLine1="            android:layout_alignParentRight=&quot;true&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HandlerLeak"
+        severity="Warning"
+        message="This Handler class should be static or leaks might occur (com.example.android.cardreader.BalanceActivity.1)"
+        category="Performance"
+        priority="4"
+        summary="Ensures that Handler classes do not hold on to a reference to an outer class"
+        explanation="Since this Handler is declared as an inner class, it may prevent the outer class from being garbage collected. If the Handler is using a Looper or MessageQueue for a thread other than the main thread, then there is no issue. If the Handler is using the Looper or MessageQueue of the main thread, you need to fix your Handler declaration, as follows: Declare the Handler as a static class; In the outer class, instantiate a WeakReference to the outer class and pass this object to your Handler when you instantiate the Handler; Make all references to members of the outer class using the WeakReference object."
+        errorLine1=" Handler mHandler = new Handler() {"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\BalanceActivity.java"
+            line="22"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HandlerLeak"
+        severity="Warning"
+        message="This Handler class should be static or leaks might occur (com.example.android.cardreader.ProcessActivity.1)"
+        category="Performance"
+        priority="4"
+        summary="Ensures that Handler classes do not hold on to a reference to an outer class"
+        explanation="Since this Handler is declared as an inner class, it may prevent the outer class from being garbage collected. If the Handler is using a Looper or MessageQueue for a thread other than the main thread, then there is no issue. If the Handler is using the Looper or MessageQueue of the main thread, you need to fix your Handler declaration, as follows: Declare the Handler as a static class; In the outer class, instantiate a WeakReference to the outer class and pass this object to your Handler when you instantiate the Handler; Make all references to members of the outer class using the WeakReference object."
+        errorLine1=" Handler mHandler = new Handler() {"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\ProcessActivity.java"
+            line="22"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HandlerLeak"
+        severity="Warning"
+        message="This Handler class should be static or leaks might occur (com.example.android.cardreader.TapActivity.1)"
+        category="Performance"
+        priority="4"
+        summary="Ensures that Handler classes do not hold on to a reference to an outer class"
+        explanation="Since this Handler is declared as an inner class, it may prevent the outer class from being garbage collected. If the Handler is using a Looper or MessageQueue for a thread other than the main thread, then there is no issue. If the Handler is using the Looper or MessageQueue of the main thread, you need to fix your Handler declaration, as follows: Declare the Handler as a static class; In the outer class, instantiate a WeakReference to the outer class and pass this object to your Handler when you instantiate the Handler; Make all references to members of the outer class using the WeakReference object."
+        errorLine1=" Handler mHandler = new Handler() {"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\java\com\example\android\cardreader\TapActivity.java"
+            line="22"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        severity="Warning"
+        message="Nested weights are bad for performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for nested layout weights, which are costly"
+        explanation="Layout weights require a widget to be measured twice. When a LinearLayout with non-zero weights is nested inside another LinearLayout with non-zero weights, then the number of measurements increase exponentially."
+        errorLine1="            android:layout_weight=&quot;1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="43"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        severity="Warning"
+        message="Nested weights are bad for performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for nested layout weights, which are costly"
+        explanation="Layout weights require a widget to be measured twice. When a LinearLayout with non-zero weights is nested inside another LinearLayout with non-zero weights, then the number of measurements increase exponentially."
+        errorLine1="            android:layout_weight=&quot;1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="103"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        severity="Warning"
+        message="Nested weights are bad for performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for nested layout weights, which are costly"
+        explanation="Layout weights require a widget to be measured twice. When a LinearLayout with non-zero weights is nested inside another LinearLayout with non-zero weights, then the number of measurements increase exponentially."
+        errorLine1="            android:layout_weight=&quot;1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="163"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        severity="Warning"
+        message="Nested weights are bad for performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for nested layout weights, which are costly"
+        explanation="Layout weights require a widget to be measured twice. When a LinearLayout with non-zero weights is nested inside another LinearLayout with non-zero weights, then the number of measurements increase exponentially."
+        errorLine1="            android:layout_weight=&quot;1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="224"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        severity="Warning"
+        message="Nested weights are bad for performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for nested layout weights, which are costly"
+        explanation="Layout weights require a widget to be measured twice. When a LinearLayout with non-zero weights is nested inside another LinearLayout with non-zero weights, then the number of measurements increase exponentially."
+        errorLine1="            android:layout_weight=&quot;1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="280"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        severity="Warning"
+        message="Nested weights are bad for performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for nested layout weights, which are costly"
+        explanation="Layout weights require a widget to be measured twice. When a LinearLayout with non-zero weights is nested inside another LinearLayout with non-zero weights, then the number of measurements increase exponentially."
+        errorLine1="            android:layout_weight=&quot;1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_balance.xml"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NestedWeights"
+        severity="Warning"
+        message="Nested weights are bad for performance"
+        category="Performance"
+        priority="3"
+        summary="Looks for nested layout weights, which are costly"
+        explanation="Layout weights require a widget to be measured twice. When a LinearLayout with non-zero weights is nested inside another LinearLayout with non-zero weights, then the number of measurements increase exponentially."
+        errorLine1="              android:layout_weight=&quot;1&quot; />"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout-w720dp\activity_main.xml"
+            line="56"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background @drawable/cc_guide_generic with a theme that also paints a background (inferred theme is @style/AppTheme)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="    android:background=&quot;@drawable/cc_guide_generic&quot; >"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background @drawable/royal_blue1 with a theme that also paints a background (inferred theme is @style/AppTheme)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="    android:background=&quot;@drawable/royal_blue1&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_balance.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background @drawable/blue_man with a theme that also paints a background (inferred theme is @style/AppTheme)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="    android:background=&quot;@drawable/blue_man&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background @drawable/cc_guide_generic with a theme that also paints a background (inferred theme is @style/AppTheme)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="    android:background=&quot;@drawable/cc_guide_generic&quot; >"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_idle.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background @drawable/cc_guide_generic with a theme that also paints a background (inferred theme is @style/AppTheme)"
+        category="Performance"
+        priority="3"
+        summary="Looks for overdraw issues (where a view is painted only to be fully painted over)"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.
+
+NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.
+
+If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.
+
+Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead.
+"
+        errorLine1="      android:background=&quot;@drawable/cc_guide_generic&quot;"
+        errorLine2="      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_main.xml"
+            line="21"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.drawable.bg_blue appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\bg_blue.png"/>
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\bg_blue.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.drawable.blue appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\blue.png"/>
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\blue.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.drawable.btn_genoa appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_genoa.xml"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.drawable.images_bg appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\images_bg.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.dimen.margin_tiny appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;margin_tiny&quot;>4dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\values\template-dimens.xml"
+            line="21"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource R.dimen.margin_small appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Looks for unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;dimen name=&quot;margin_small&quot;>8dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\values\template-dimens.xml"
+            line="22"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        severity="Warning"
+        message="This RelativeLayout layout or its LinearLayout parent is useless; transfer the background attribute to the other view"
+        category="Performance"
+        priority="2"
+        summary="Checks whether a parent layout can be removed."
+        explanation="A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy."
+        errorLine1="    &lt;RelativeLayout"
+        errorLine2="    ^"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_tap.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        severity="Warning"
+        message="The bg_blue.png icon has identical contents in the following configuration folders: drawable-xhdpi, drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="5"
+        summary="Finds icons that have identical bitmaps across various configuration parameters"
+        explanation="If an icon is provided under different configuration parameters such as `drawable-hdpi` or `-v11`, they should typically be different. This detector catches cases where the same icon is provided in different configuration folder which is usually not intentional.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\bg_blue.png"/>
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\bg_blue.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        severity="Warning"
+        message="The blue.png icon has identical contents in the following configuration folders: drawable-xhdpi, drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="5"
+        summary="Finds icons that have identical bitmaps across various configuration parameters"
+        explanation="If an icon is provided under different configuration parameters such as `drawable-hdpi` or `-v11`, they should typically be different. This detector catches cases where the same icon is provided in different configuration folder which is usually not intentional.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\blue.png"/>
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\blue.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        severity="Warning"
+        message="The btn_blue_pink_glossy.9.png icon has identical contents in the following configuration folders: drawable-xhdpi, drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="5"
+        summary="Finds icons that have identical bitmaps across various configuration parameters"
+        explanation="If an icon is provided under different configuration parameters such as `drawable-hdpi` or `-v11`, they should typically be different. This detector catches cases where the same icon is provided in different configuration folder which is usually not intentional.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\btn_blue_pink_glossy.9.png"/>
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue_pink_glossy.9.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        severity="Warning"
+        message="The cc_guide_generic.png icon has identical contents in the following configuration folders: drawable-xhdpi, drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="5"
+        summary="Finds icons that have identical bitmaps across various configuration parameters"
+        explanation="If an icon is provided under different configuration parameters such as `drawable-hdpi` or `-v11`, they should typically be different. This detector catches cases where the same icon is provided in different configuration folder which is usually not intentional.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\cc_guide_generic.png"/>
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\cc_guide_generic.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        severity="Warning"
+        message="The paper.png icon has identical contents in the following configuration folders: drawable-xhdpi, drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="5"
+        summary="Finds icons that have identical bitmaps across various configuration parameters"
+        explanation="If an icon is provided under different configuration parameters such as `drawable-hdpi` or `-v11`, they should typically be different. This detector catches cases where the same icon is provided in different configuration folder which is usually not intentional.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\paper.png"/>
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\paper.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        severity="Warning"
+        message="The top_bar_bg_h.9.png icon has identical contents in the following configuration folders: drawable-xhdpi, drawable-xxhdpi"
+        category="Usability:Icons"
+        priority="5"
+        summary="Finds icons that have identical bitmaps across various configuration parameters"
+        explanation="If an icon is provided under different configuration parameters such as `drawable-hdpi` or `-v11`, they should typically be different. This detector catches cases where the same icon is provided in different configuration folder which is usually not intentional.">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\top_bar_bg_h.9.png"/>
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\top_bar_bg_h.9.png"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in drawable-hdpi: bg_blue.png, blue.png, blue_man.png, btn_blue.xml, btn_blue_glossy.9.png... (9 more)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Ensures that icons provide custom versions for all supported densities"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-hdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in drawable-mdpi: bg_blue.png, blue.png, blue_man.png, btn_blue.xml, btn_blue_glossy.9.png... (10 more)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Ensures that icons provide custom versions for all supported densities"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-mdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in drawable-xhdpi: tile.9.png (found in drawable-hdpi)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Ensures that icons provide custom versions for all supported densities"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="[Accessibility] Missing contentDescription attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Ensures that image widgets provide a contentDescription"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.
+
+Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, just suppress the lint warning with a tools:ignore=&quot;ContentDescription&quot; attribute.
+
+Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`. See http://developer.android.com/guide/topics/ui/accessibility/checklist.html#special-cases."
+        errorLine1="    &lt;ImageView"
+        errorLine2="    ^"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\main_fragment.xml"
+            line="22"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Amount&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Amount&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;1&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;1&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;2&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;2&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="57"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;3&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;3&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="75"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;4&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;4&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="98"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;5&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;5&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="117"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;6&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;6&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="135"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;7&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;7&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="158"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;8&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;8&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="177"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;9&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;9&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="195"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;0&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;0&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="219"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;DEL&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;DEL&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="238"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;OK&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;OK&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="256"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;$&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;$&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="282"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;.00&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;.00&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+            line="303"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Balance&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Balance&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_balance.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;$&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;$&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_balance.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;1234.56&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;1234.56&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_balance.xml"
+            line="49"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;SIGN UP&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;SIGN UP&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;First Name&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:hint=&quot;First Name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Last Name&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:hint=&quot;Last Name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+            line="42"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Email&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:hint=&quot;Email&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+            line="51"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Mobile&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:hint=&quot;Mobile&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Save&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Save&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+            line="77"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;IDLE&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;IDLE&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_idle.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Issue Card&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Issue Card&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_idle.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Deposit&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Deposit&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_idle.xml"
+            line="49"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Purchase&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Purchase&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_idle.xml"
+            line="68"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Balance&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Balance&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_idle.xml"
+            line="83"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Processing please wait&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Processing please wait&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_process.xml"
+            line="11"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="[I18N] Hardcoded string &quot;Tap card/phone&quot;, should use @string resource"
+        category="Internationalization"
+        priority="5"
+        summary="Looks for hardcoded text attributes which should be converted to resource lookup"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:
+
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)
+
+* The application cannot be translated to other languages by just adding new translations for existing string resources.
+
+In Android Studio and Eclipse there are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Tap card/phone&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="C:\apps\cafedemo\Application\src\main\res\layout\activity_tap.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+</issues>

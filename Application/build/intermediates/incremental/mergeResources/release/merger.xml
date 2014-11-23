@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="21.0.0" >
+        <source path="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.0\res" >
+            <file
+                path="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.0\res\values\values.xml"
+                qualifiers="" >
+                <declare-styleable name="CardView" >
+
+                    <!-- Background color for CardView. -->
+                    <attr
+                        name="cardBackgroundColor"
+                        format="color" />
+                    <!-- Corner radius for CardView. -->
+                    <attr
+                        name="cardCornerRadius"
+                        format="dimension" />
+                    <!-- Elevation for CardView. -->
+                    <attr
+                        name="cardElevation"
+                        format="dimension" />
+                    <!-- Maximum Elevation for CardView. -->
+                    <attr
+                        name="cardMaxElevation"
+                        format="dimension" />
+                    <!-- Add padding in API v21+ as well to have the same measurements with previous versions. -->
+                    <attr
+                        name="cardUseCompatPadding"
+                        format="boolean" />
+                    <!-- Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. -->
+                    <attr
+                        name="cardPreventCornerOverlap"
+                        format="boolean" />
+                    <!-- Inner padding between the edges of the Card and children of the CardView. -->
+                    <attr
+                        name="contentPadding"
+                        format="dimension" />
+                    <!-- Inner padding between the left edge of the Card and children of the CardView. -->
+                    <attr
+                        name="contentPaddingLeft"
+                        format="dimension" />
+                    <!-- Inner padding between the right edge of the Card and children of the CardView. -->
+                    <attr
+                        name="contentPaddingRight"
+                        format="dimension" />
+                    <!-- Inner padding between the top edge of the Card and children of the CardView. -->
+                    <attr
+                        name="contentPaddingTop"
+                        format="dimension" />
+                    <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
+                    <attr
+                        name="contentPaddingBottom"
+                        format="dimension" />
+                </declare-styleable>
+
+                <color name="cardview_shadow_start_color" >#37000000
+                </color>
+
+                <dimen name="cardview_default_elevation" >2dp
+                </dimen>
+
+                <style name="CardView" >
+                    <item name="cardBackgroundColor">
+@color/cardview_light_background
+                    </item>
+                    <item name="cardCornerRadius">
+@dimen/cardview_default_radius
+                    </item>
+                    <item name="cardElevation">
+@dimen/cardview_default_elevation
+                    </item>
+                    <item name="cardMaxElevation">
+@dimen/cardview_default_elevation
+                    </item>
+                    <item name="cardUseCompatPadding">
+false
+                    </item>
+                    <item name="cardPreventCornerOverlap">
+true
+                    </item>
+                </style>
+
+                <dimen name="cardview_compat_inset_shadow" >1dp
+                </dimen>
+
+                <color name="cardview_shadow_end_color" >#03000000
+                </color>
+
+                <style name="CardView.Light" >
+                    <item name="cardBackgroundColor">
+@color/cardview_light_background
+                    </item>
+                </style>
+
+                <color name="cardview_light_background" >#FFFAFAFA
+                </color>
+
+                <dimen name="cardview_default_radius" >2dp
+                </dimen>
+
+                <style name="CardView.Dark" >
+                    <item name="cardBackgroundColor">
+@color/cardview_dark_background
+                    </item>
+                </style>
+
+                <color name="cardview_dark_background" >#FF202020
+                </color>
+            </file>
+        </source>
+    </dataSet>
+    <dataSet config="21.0.0" >
+        <source path="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\res" />
+    </dataSet>
+    <dataSet config="21.0.0" >
+        <source path="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\res" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="C:\apps\cafedemo\Application\src\main\res" >
+            <file
+                name="ic_launcher"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="tile"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-hdpi\tile.9.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-mdpi\ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="bg_blue"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\bg_blue.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="blue"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\blue.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="blue_man"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\blue_man.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_blue"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue.xml"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_blue_glossy"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue_glossy.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_blue_pink_glossy"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue_pink_glossy.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_genoa"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_genoa.xml"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_orange"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_orange.xml"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_seagull"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_seagull.xml"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="cc_guide_generic"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\cc_guide_generic.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="images_bg"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\images_bg.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="paper"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\paper.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="royal_blue1"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\royal_blue1.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="top_bar_bg_h"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\top_bar_bg_h.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="bg_blue"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\bg_blue.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="blue"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\blue.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_blue_pink_glossy"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\btn_blue_pink_glossy.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="card_background"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\card_background.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="cc_guide_generic"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\cc_guide_generic.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="paper"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\paper.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="top_bar_bg_h"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\top_bar_bg_h.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="activity_amount"
+                path="C:\apps\cafedemo\Application\src\main\res\layout\activity_amount.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_balance"
+                path="C:\apps\cafedemo\Application\src\main\res\layout\activity_balance.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_customer"
+                path="C:\apps\cafedemo\Application\src\main\res\layout\activity_customer.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_idle"
+                path="C:\apps\cafedemo\Application\src\main\res\layout\activity_idle.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main"
+                path="C:\apps\cafedemo\Application\src\main\res\layout\activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_process"
+                path="C:\apps\cafedemo\Application\src\main\res\layout\activity_process.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_tap"
+                path="C:\apps\cafedemo\Application\src\main\res\layout\activity_tap.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="main_fragment"
+                path="C:\apps\cafedemo\Application\src\main\res\layout\main_fragment.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main"
+                path="C:\apps\cafedemo\Application\src\main\res\layout-w720dp\activity_main.xml"
+                qualifiers="w720dp-v13"
+                type="layout" />
+            <file
+                name="main"
+                path="C:\apps\cafedemo\Application\src\main\res\menu\main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values\base-strings.xml"
+                qualifiers="" >
+                <string name="intro_message" >
+<![CDATA[
+        
+            
+            This sample demonstrates how to implement a low-level NFC card reader, for reading cards
+            that do not contain NDEF or Android Beam data. This sample is designed to read the virtual
+            loyalty card implemented in the "CardEmulation" sample.\n\n
+
+            In particular, this sample demonstrates how to disable Android Beam, select which AIDs the
+            reader is interested, and establish communication with the card
+            
+        
+        ]]>
+                </string>
+                <string name="app_name" >CardReader
+                </string>
+            </file>
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values\fragmentview_strings.xml"
+                qualifiers="" >
+                <string name="sample_show_log" >Show Log
+                </string>
+                <string name="sample_hide_log" >Hide Log
+                </string>
+            </file>
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values\strings.xml"
+                qualifiers="" >
+                <string name="card_title" >Sample Loyalty Card
+                </string>
+                <string name="account_number" >Account Number
+                </string>
+            </file>
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values\template-dimens.xml"
+                qualifiers="" >
+                <dimen name="margin_small" >8dp
+                </dimen>
+                <dimen name="vertical_page_margin" >@dimen/margin_medium
+                </dimen>
+                <dimen name="margin_tiny" >4dp
+                </dimen>
+                <dimen name="margin_large" >32dp
+                </dimen>
+                <dimen name="margin_huge" >64dp
+                </dimen>
+                <dimen name="margin_medium" >16dp
+                </dimen>
+                <dimen name="horizontal_page_margin" >@dimen/margin_medium
+                </dimen>
+            </file>
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values\template-styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="Theme.Base"
+                    parent="android:Theme.Light" />
+
+                <style name="Widget.SampleMessage" >
+                    <item name="android:textAppearance">
+?android:textAppearanceMedium
+                    </item>
+                    <item name="android:lineSpacingMultiplier">
+1.1
+                    </item>
+                </style>
+
+                <style
+                    name="btnStyleOrange"
+                    parent="@android:style/Widget.Button" >
+                    <item name="android:textSize">
+15sp
+                    </item>
+                    <item name="android:textStyle">
+bold
+                    </item>
+                    <item name="android:textColor">
+#FFFFFF
+                    </item>
+                    <item name="android:gravity">
+center
+                    </item>
+                    <item name="android:shadowColor">
+#000000
+                    </item>
+                    <item name="android:shadowDx">
+1
+                    </item>
+                    <item name="android:shadowDy">
+1
+                    </item>
+                    <item name="android:shadowRadius">
+0.6
+                    </item>
+                    <item name="android:background">
+@drawable/btn_orange
+                    </item>
+                    <item name="android:padding">
+10dip
+                    </item>
+                </style>
+
+                <style
+                    name="AppTheme"
+                    parent="Theme.Sample" />
+
+                <style
+                    name="Theme.Sample"
+                    parent="Theme.Base" />
+
+                <style name="Widget" />
+
+                <style name="Widget.SampleMessageTile" >
+                    <item name="android:background">
+@drawable/tile
+                    </item>
+                    <item name="android:shadowColor">
+#7F000000
+                    </item>
+                    <item name="android:shadowDy">
+-3.5
+                    </item>
+                    <item name="android:shadowRadius">
+2
+                    </item>
+                </style>
+
+                <style
+                    name="btnStyleSeagull"
+                    parent="@android:style/Widget.Button" >
+                    <item name="android:textSize">
+15sp
+                    </item>
+                    <item name="android:textStyle">
+bold
+                    </item>
+                    <item name="android:textColor">
+#626954
+                    </item>
+                    <item name="android:gravity">
+center
+                    </item>
+                    <item name="android:shadowColor">
+#000000
+                    </item>
+                    <item name="android:shadowDx">
+1
+                    </item>
+                    <item name="android:shadowDy">
+1
+                    </item>
+                    <item name="android:shadowRadius">
+3
+                    </item>
+                    <item name="android:background">
+@drawable/btn_seagull
+                    </item>
+                    <item name="android:padding">
+10dip
+                    </item>
+                </style>
+
+                <style name="ButtonText" >
+                    <item name="android:layout_width">
+wrap_content
+                    </item>
+                    <item name="android:layout_height">
+wrap_content
+                    </item>
+                    <item name="android:textColor">
+#ffffff
+                    </item>
+                    <item name="android:gravity">
+center
+                    </item>
+                    <item name="android:layout_margin">
+3dp
+                    </item>
+                    <item name="android:textSize">
+30dp
+                    </item>
+                    <item name="android:shadowColor">
+#000000
+                    </item>
+                    <item name="android:shadowDx">
+1
+                    </item>
+                    <item name="android:shadowDy">
+1
+                    </item>
+                    <item name="android:shadowRadius">
+5
+                    </item>
+                    <item name="android:paddingLeft">
+15dp
+                    </item>
+                    <item name="android:paddingRight">
+15dp
+                    </item>
+                </style>
+            </file>
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values-sw600dp\template-dimens.xml"
+                qualifiers="sw600dp-v13" >
+                <dimen name="vertical_page_margin" >@dimen/margin_medium
+                </dimen>
+                <dimen name="horizontal_page_margin" >@dimen/margin_huge
+                </dimen>
+            </file>
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values-sw600dp\template-styles.xml"
+                qualifiers="sw600dp-v13" >
+
+                <style name="Widget.SampleMessage" >
+                    <item name="android:textAppearance">
+?android:textAppearanceLarge
+                    </item>
+                    <item name="android:lineSpacingMultiplier">
+1.2
+                    </item>
+                    <item name="android:shadowDy">
+-6.5
+                    </item>
+                </style>
+            </file>
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values-v11\template-styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="Theme.Base"
+                    parent="android:Theme.Holo.Light" />
+            </file>
+            <file
+                path="C:\apps\cafedemo\Application\src\main\res\values-v21\template-styles.xml"
+                qualifiers="v21" >
+
+                <style
+                    name="Theme.Base"
+                    parent="android:Theme.Material.Light" />
+            </file>
+            <file
+                name="nfc_tech_filter"
+                path="C:\apps\cafedemo\Application\src\main\res\xml\nfc_tech_filter.xml"
+                qualifiers=""
+                type="xml" />
+        </source>
+        <source path="C:\apps\cafedemo\Application\src\common\res" />
+        <source path="C:\apps\cafedemo\Application\src\template\res" />
+        <source path="C:\apps\cafedemo\Application\build\generated\res\rs\release" />
+        <source path="C:\apps\cafedemo\Application\build\generated\res\generated\release" />
+    </dataSet>
+    <dataSet config="release" >
+        <source path="C:\apps\cafedemo\Application\src\release\res" />
+    </dataSet>
+
+</merger>

@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/royal_blue1"
+    android:layout_weight="1"
     android:orientation="vertical" >
     
     <RelativeLayout
@@ -19,11 +21,40 @@
             android:textSize="20sp" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv_balance_num"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="123,400" />
+        android:background="@drawable/paper">
+        <TextView
+            android:id="@+id/text_amount_dollar_sign"
+            android:layout_width="20dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:gravity="right|bottom"
+            android:text="$"
+            android:textColor="#000000"
+            android:textSize="45dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_balance_num"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:gravity="left|bottom"
+            android:shadowColor="#000"
+            android:textColor="#000000"
+            android:text="1234.56"
+            android:textSize="45dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="4" >
+    </View>
+
 
 </LinearLayout>

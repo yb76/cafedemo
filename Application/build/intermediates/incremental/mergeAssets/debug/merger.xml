@@ -11,7 +11,14 @@
         <source path="C:\apps\cafedemo\Application\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.0\assets" />
     </dataSet>
     <dataSet config="main" >
-        <source path="C:\apps\cafedemo\Application\src\main\assets" />
+        <source path="C:\apps\cafedemo\Application\src\main\assets" >
+            <file
+                name="HelveticaNeueLTStdBd.otf"
+                path="C:\apps\cafedemo\Application\src\main\assets\HelveticaNeueLTStdBd.otf" />
+            <file
+                name="HelveticaNeueLTStdLt.otf"
+                path="C:\apps\cafedemo\Application\src\main\assets\HelveticaNeueLTStdLt.otf" />
+        </source>
     </dataSet>
     <dataSet config="debug" >
         <source path="C:\apps\cafedemo\Application\src\debug\assets" />

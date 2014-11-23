@@ -144,6 +144,26 @@ true
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
+                name="blue_man"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\blue_man.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_blue"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue.xml"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_blue_glossy"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue_glossy.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="btn_blue_pink_glossy"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue_pink_glossy.9.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
                 name="btn_genoa"
                 path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_genoa.xml"
                 qualifiers="xhdpi-v4"
@@ -169,6 +189,21 @@ true
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
+                name="images_bg"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\images_bg.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="paper"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\paper.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="royal_blue1"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\royal_blue1.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
                 name="top_bar_bg_h"
                 path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\top_bar_bg_h.9.png"
                 qualifiers="xhdpi-v4"
@@ -184,6 +219,11 @@ true
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
+                name="btn_blue_pink_glossy"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\btn_blue_pink_glossy.9.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
                 name="card_background"
                 path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\card_background.png"
                 qualifiers="xxhdpi-v4"
@@ -196,6 +236,11 @@ true
             <file
                 name="ic_launcher"
                 path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="paper"
+                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\paper.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
@@ -503,36 +548,6 @@ center
                 path="C:\apps\cafedemo\Application\src\main\res\xml\nfc_tech_filter.xml"
                 qualifiers=""
                 type="xml" />
-            <file
-                name="btn_blue_glossy"
-                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue_glossy.9.png"
-                qualifiers="xhdpi-v4"
-                type="drawable" />
-            <file
-                name="btn_blue_pink_glossy"
-                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue_pink_glossy.9.png"
-                qualifiers="xhdpi-v4"
-                type="drawable" />
-            <file
-                name="btn_blue_pink_glossy"
-                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\btn_blue_pink_glossy.9.png"
-                qualifiers="xxhdpi-v4"
-                type="drawable" />
-            <file
-                name="btn_blue"
-                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\btn_blue.xml"
-                qualifiers="xhdpi-v4"
-                type="drawable" />
-            <file
-                name="paper"
-                path="C:\apps\cafedemo\Application\src\main\res\drawable-xxhdpi\paper.png"
-                qualifiers="xxhdpi-v4"
-                type="drawable" />
-            <file
-                name="paper"
-                path="C:\apps\cafedemo\Application\src\main\res\drawable-xhdpi\paper.png"
-                qualifiers="xhdpi-v4"
-                type="drawable" />
         </source>
         <source path="C:\apps\cafedemo\Application\src\common\res" />
         <source path="C:\apps\cafedemo\Application\src\template\res" />
