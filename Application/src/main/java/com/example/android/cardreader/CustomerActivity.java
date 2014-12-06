@@ -9,12 +9,13 @@ import android.view.View;
 import android.widget.EditText;
 
 public class CustomerActivity extends Activity {
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		initView();
-	}
+        cardInfo.getInstance().setNextStep(cardInfo.step_action.STEP_NONE.ordinal());
+    }
 
 	private void initView() {
 		setContentView(R.layout.activity_customer);
@@ -30,23 +31,49 @@ public class CustomerActivity extends Activity {
                 if(txt_fname.toString().isEmpty()){
                 }
                 else {
+
+                    cardInfo.getInstance().setCust(txt_fname.getText().toString()
+                            , txt_lname.getText().toString()
+                            , txt_email.getText().toString()
+                            , txt_mobile.getText().toString());
+
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("Deposit money")
                             .setMessage("Deposit Money?")
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
-                                    String str = "Yes pressed";
-                                    //Toast.makeText(AmountActivity.this, str, 100).show();
-                                    //Yes button clicked, do something
+                                    cardInfo.getInstance().setNextStep(cardInfo.step_action.STEP_TAPCARD_WRITE_CUST_DEPOSIT.ordinal());
                                     Intent intent1 = new Intent(CustomerActivity.this, AmountActivity.class);
                                     startActivity(intent1);
+                                    CustomerActivity.this.finish();
+                                }
+                            })
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    cardInfo.getInstance().setNextStep(cardInfo.step_action.STEP_TAPCARD_WRITE_CUST.ordinal());
+                                    Intent intent1 = new Intent(CustomerActivity.this, TapcardActivity.class);
+                                    startActivity(intent1);
+                                    CustomerActivity.this.finish();
 
                                 }
                             })
-                            .setNegativeButton("No", null)						//Do nothing on no
                             .show();
 
-                    //this.finish();
+/*
+                    int nextstep = cardInfo.getInstance().getNextStep() ;
+                    if(nextstep == cardInfo.step_action.STEP_DEPOSIT.ordinal()) {
+                        Intent intent1 = new Intent(CustomerActivity.this, AmountActivity.class);
+                        startActivity(intent1);
+                    } else if(nextstep == cardInfo.step_action.STEP_TAPCARD.ordinal()){
+                        Intent intent1 = new Intent(CustomerActivity.this, TapcardActivity.class);
+                        startActivity(intent1);
+                    } else {
+                        //Intent intent1 = new Intent(CustomerActivity.this, TapcardActivity.class);
+                        //startActivity(intent1);
+                        //this.finish();
+
+                    }
+*/
                 }
                 break;
 
@@ -54,5 +81,8 @@ public class CustomerActivity extends Activity {
 			//	this.finish();
 			//	break;
 		}
-	}
+
+    }
+
+
 }

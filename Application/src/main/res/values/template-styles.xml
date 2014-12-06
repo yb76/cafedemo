@@ -77,4 +77,9 @@
         <item name="android:paddingLeft">15dp</item>
         <item name="android:paddingRight">15dp</item>
     </style>
+    <style name="CustomProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+            <item name="android:indeterminateOnly">false</item>
+            <item name="android:minHeight">10dip</item>
+            <item name="android:maxHeight">20dip</item>
+    </style>
 </resources>

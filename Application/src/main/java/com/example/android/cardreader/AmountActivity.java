@@ -67,6 +67,14 @@ public class AmountActivity extends Activity {
                     .setNegativeButton("No", null)						//Do nothing on no
                     .show();
 */
+            int nextstep = cardInfo.getInstance().getNextStep() ;
+            if(nextstep == cardInfo.step_action.STEP_PURCHASE.ordinal()) {
+                cardInfo.getInstance().setPurchase(lval_total);
+            }else if(nextstep == cardInfo.step_action.STEP_DEPOSIT.ordinal()) {
+                cardInfo.getInstance().setDeposit(lval_total);
+            }else if(nextstep == cardInfo.step_action.STEP_TAPCARD_WRITE_CUST_DEPOSIT.ordinal()) {
+                cardInfo.getInstance().setDeposit(lval_total);
+            }
 
             Intent intent = new Intent(this, TapcardActivity.class);
             startActivity(intent);

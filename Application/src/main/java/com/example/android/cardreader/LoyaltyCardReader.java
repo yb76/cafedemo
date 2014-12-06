@@ -16,6 +16,8 @@
 package com.example.android.cardreader;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
@@ -26,6 +28,7 @@ import com.example.android.common.logger.Log;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
+import java.nio.charset.Charset;
 import java.util.Arrays;
 
 /**
@@ -34,7 +37,15 @@ import java.util.Arrays;
  * Reader mode can be invoked by calling NfcAdapter
  */
 public class LoyaltyCardReader implements NfcAdapter.ReaderCallback {
+    public static MifareUltralight mfDep =null;
+
     private static final String TAG = "LoyaltyCardReader";
+    private static final int  PAGE_FIRSTNAME = 4;
+    private static final int  PAGE_LASTNAME = 8;
+    private static final int  PAGE_EMAIL = 12;
+    private static final int  PAGE_MOBILE = 18;
+    private static final int  PAGE_BAL = 22;
+
     // AID for our loyalty card service.
     private static final String SAMPLE_LOYALTY_CARD_AID = "F222222222";
     // ISO-DEP command HEADER for selecting an AID.
@@ -70,7 +81,7 @@ public class LoyaltyCardReader implements NfcAdapter.ReaderCallback {
         //
         // In order to communicate with a device using HCE, the discovered tag should be processed
         // using the IsoDep class.
-        IsoDep isoDep = IsoDep.get(tag);
+ /*       IsoDep isoDep = IsoDep.get(tag);
         if (isoDep != null) {
             try {
                 // Connect to the remote NFC device
@@ -100,36 +111,73 @@ public class LoyaltyCardReader implements NfcAdapter.ReaderCallback {
             }
         }
 
-        MifareUltralight mfDep = MifareUltralight.get(tag);
+*/      int nextstep = cardInfo.getInstance().getNextStep() ;
+
+        mfDep = MifareUltralight.get(tag);
         if (mfDep != null) {
             try {
-                String SELECT_UID_APDU = "00CA000000"; //"FFCA000000";
                 // Connect to the remote NFC device
                 mfDep.connect();
-                // Build SELECT AID command for our loyalty card service.
-                // This command tells the remote device which service we wish to communicate with.
-                Log.i(TAG, "Requesting remote UID: " + SELECT_UID_APDU);
 
-                byte[] command = HexStringToByteArray(SELECT_UID_APDU );
-                //BuildSelectApdu(SAMPLE_LOYALTY_CARD_AID);
-                // Send command to remote device
-                Log.i(TAG, "Sending: " + ByteArrayToHexString(command));
-                byte[] result = mfDep.transceive(command);
-                // If AID is successfully selected, 0x9000 is returned as the status word (last 2
-                // bytes of the result) by convention. Everything before the status word is
-                // optional payload, which is used here to hold the account number.
-                int resultLength = result.length;
-                byte[] statusWord = {result[resultLength-2], result[resultLength-1]};
-                byte[] payload = Arrays.copyOf(result, resultLength-2);
-                if (Arrays.equals(SELECT_OK_SW, statusWord)) {
-                    // The remote NFC device will immediately respond with its stored account number
-                    String accountNumber = new String(payload, "UTF-8");
-                    Log.i(TAG, "Received: " + accountNumber);
-                    // Inform CardReaderFragment of received account number
-                    mAccountCallback.get().onAccountReceived(accountNumber);
+                if(nextstep == cardInfo.step_action.STEP_PURCHASE.ordinal()) {
+                    byte[] payload = mfDep.readPages(PAGE_BAL); // 16bytes
+                    long bal = 0;
+                    try {
+                        bal = Long.parseLong(ByteArrayToAscii(payload));
+                    } catch (NumberFormatException nfe) {
+                        bal = 0;
+                    }
+                    bal = bal - cardInfo.getInstance().getDeposit();
+                    if(bal < 0) {
+                        bal = 0;// TODO
+                    }
+                    writeTag(PAGE_BAL,String.format("%-16s",String.format("%016d",bal)));
+                    cardInfo.getInstance().setBal(bal);
                 }
+
+                if(nextstep == cardInfo.step_action.STEP_DEPOSIT.ordinal()||
+                   nextstep == cardInfo.step_action.STEP_TAPCARD_WRITE_CUST_DEPOSIT.ordinal()) {
+                    byte[] payload = mfDep.readPages(PAGE_BAL); // 16bytes
+                    long bal = 0;
+                    try {
+                        bal = Long.parseLong(ByteArrayToAscii(payload));
+                    } catch (NumberFormatException nfe) {
+                        bal = 0;
+                    }
+                    bal = bal + cardInfo.getInstance().getDeposit();
+                    Log.i(TAG, "readpages :" + ByteArrayToAscii(payload));
+                    writeTag(PAGE_BAL,String.format("%-16s",String.format("%016d",bal)));
+                    Log.i(TAG, "writepages :" + String.format("%016d",bal));
+                    cardInfo.getInstance().setBal(bal);
+                }
+
+                if(nextstep == cardInfo.step_action.STEP_TAPCARD_WRITE_CUST.ordinal()||
+                   nextstep == cardInfo.step_action.STEP_TAPCARD_WRITE_CUST_DEPOSIT.ordinal()) {
+                    writeTag(PAGE_FIRSTNAME,String.format("%-16s",cardInfo.getInstance().getFirstname()));
+                    writeTag(PAGE_LASTNAME,String.format("%-16s",cardInfo.getInstance().getLastname()));
+                    writeTag(PAGE_EMAIL,String.format("%-16s",cardInfo.getInstance().getEmail()));
+                    writeTag(PAGE_MOBILE,String.format("%-16s",cardInfo.getInstance().getMobile()));
+                    Log.i(TAG, "writepages done" );
+                }
+
+                if(nextstep == cardInfo.step_action.STEP_TAPCARD_READ.ordinal())
+                {
+                    byte[] payload = mfDep.readPages(PAGE_FIRSTNAME); // 16bytes
+                    Log.i(TAG, "pages: " + ByteArrayToHexString(payload));
+                }
+
+
             } catch (IOException e) {
                 Log.e(TAG, "Error communicating with card: " + e.toString());
+            } finally {
+                if (mfDep != null) {
+                    try {
+                        mfDep.close();
+                    }
+                    catch (IOException e) {
+                        Log.e(TAG, "Error closing tag...", e);
+                    }
+                }
             }
         }
         String accountNumber = "98654321";
@@ -185,4 +233,56 @@ public class LoyaltyCardReader implements NfcAdapter.ReaderCallback {
         return data;
     }
 
+    public static String ByteArrayToAscii(byte[] data) {
+        StringBuilder sb = new StringBuilder(data.length);
+        for (int i = 0; i < data.length; ++ i) {
+            if (data[i] < 0) throw new IllegalArgumentException();
+            sb.append((char) data[i]);
+        }
+        return sb.toString();
+    }
+
+    public void writeTag( int pageoffset, String tagText) {
+        //MifareUltralight ultralight = MifareUltralight.get(tag);
+        try {
+            //ultralight.connect();
+            int idx = 0;
+            mfDep.writePage(pageoffset, tagText.substring(idx,idx+4).getBytes(Charset.forName("US-ASCII")));
+            idx = idx + 4;
+            mfDep.writePage(pageoffset+1, tagText.substring(idx,idx+4).getBytes(Charset.forName("US-ASCII")));
+            idx = idx + 4;
+            mfDep.writePage(pageoffset+2, tagText.substring(idx,idx+4).getBytes(Charset.forName("US-ASCII")));
+            idx = idx + 4;
+            mfDep.writePage(pageoffset+3, tagText.substring(idx,idx+4).getBytes(Charset.forName("US-ASCII")));
+        } catch (IOException e) {
+            Log.e(TAG, "IOException while closing MifareUltralight...", e);
+        } finally {
+            //try {
+                //ultralight.close();
+            //} catch (IOException e) {
+              //  Log.e(TAG, "IOException while closing MifareUltralight...", e);
+            //}
+        }
+    }
+
+    public String readTag(Tag tag) {
+        MifareUltralight mifare = MifareUltralight.get(tag);
+        try {
+            mifare.connect();
+            byte[] payload = mifare.readPages(4);
+            return new String(payload, Charset.forName("US-ASCII"));
+        } catch (IOException e) {
+            Log.e(TAG, "IOException while writing MifareUltralight message...", e);
+        } finally {
+            if (mifare != null) {
+                try {
+                    mifare.close();
+                }
+                catch (IOException e) {
+                    Log.e(TAG, "Error closing tag...", e);
+                }
+            }
+        }
+        return null;
+    }
 }
