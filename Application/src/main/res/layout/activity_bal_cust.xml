@@ -12,7 +12,7 @@
         android:background="@drawable/top_bar_bg_h" >
 
         <TextView
-            android:id="@+id/tv_balance_title"
+            android:id="@+id/tv_bal_cust_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -21,7 +21,49 @@
             android:textSize="20sp" />
     </RelativeLayout>
 
+
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1.0" >
+
+        <TextView
+            android:id="@+id/tv_bal_cust_fname"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="First Name"
+            android:textColor="#ff8000"
+            android:maxLength="100"
+            android:textSize="35sp" />
+        <TextView
+            android:id="@+id/tv_bal_cust_lname"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Last Name"
+            android:textColor="#ff8000"
+            android:maxLength="100"
+            android:textSize="35sp" />
+
+        <TextView
+            android:id="@+id/tv_bal_cust_email"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Email"
+            android:textColor="#ff8000"
+            android:maxLength="100"
+            android:textSize="35sp" />
+        <TextView
+            android:id="@+id/tv_bal_cust_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="Mobile"
+            android:textColor="#ff8000"
+            android:maxLength="100"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+        <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="150dp"

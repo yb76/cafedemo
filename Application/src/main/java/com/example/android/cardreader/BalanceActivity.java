@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.KeyEvent;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -55,9 +56,31 @@ public class BalanceActivity extends Activity {
         // Get the Drawable custom_progressbar
 
         //NetworkConnect nc = new NetworkConnect.execute("http://www.google.com"););
-		mHandler.sendEmptyMessageDelayed(0, 10000);
+		//mHandler.sendEmptyMessageDelayed(0, 10000);
 	}
-	
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0) {
+            event.startTracking();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.isTracking()
+                && !event.isCanceled()) {
+            Intent intent = new Intent(BalanceActivity.this, IDLEActivity.class);
+            startActivity(intent);
+            BalanceActivity.this.finish();
+            return true;
+        }
+        return super.onKeyUp(keyCode, event);
+    }
+
 	Handler mHandler = new Handler() {
 		public void handleMessage(Message msg) {
 			Intent intent = new Intent(BalanceActivity.this, IDLEActivity.class);

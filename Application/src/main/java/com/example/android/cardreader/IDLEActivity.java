@@ -22,23 +22,30 @@ public class IDLEActivity extends Activity {
     }
 
     public void onClick(View v) {
+        Intent intent = null;
         switch (v.getId()) {
-            case R.id.btn_idle_ic ://发行卡、借记卡
-                Intent intent = new Intent(this, CustomerActivity.class);
+            case R.id.btn_idle_ic :
+                intent = new Intent(this, CustomerActivity.class);
                 cardInfo.getInstance().setNextStep(cardInfo.step_action.STEP_ISSUE.ordinal());
                 startActivity(intent);
                 break;
 
-            case R.id.btn_idle_deposit ://存款
-                Intent intent1 = new Intent(this, AmountActivity.class);
+            case R.id.btn_idle_deposit :
+                intent = new Intent(this, AmountActivity.class);
                 cardInfo.getInstance().setNextStep(cardInfo.step_action.STEP_DEPOSIT.ordinal());
-                startActivity(intent1);
+                startActivity(intent);
                 break;
 
-            case R.id.btn_idle_purchase ://购买
+            case R.id.btn_idle_purchase :
                 cardInfo.getInstance().setNextStep(cardInfo.step_action.STEP_PURCHASE.ordinal());
-                Intent intent2 = new Intent(this, AmountActivity.class);
-                startActivity(intent2);
+                intent = new Intent(this, AmountActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.btn_idle_balance :
+                cardInfo.getInstance().setNextStep(cardInfo.step_action.STEP_TAPCARD_READ.ordinal());
+                intent = new Intent(this, TapcardActivity.class);
+                startActivity(intent);
                 break;
 
             default :

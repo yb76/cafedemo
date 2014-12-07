@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+//import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -104,8 +105,16 @@ public class CardReaderFragment extends Fragment implements LoyaltyCardReader.Ac
             @Override
             public void run() {
                 //mAccountField.setText(account);
-                Intent intent = new Intent( getActivity(), BalanceActivity.class);
+                Intent intent = null;
+
+                int nextstep = cardInfo.getInstance().getNextStep() ;
+                if(nextstep == cardInfo.step_action.STEP_TAPCARD_READ.ordinal()) {
+                    intent = new Intent(getActivity(), BalanceCustomerActivity.class);
+                }else {
+                    intent = new Intent(getActivity(), BalanceActivity.class);
+                }
                 getActivity().startActivity(intent);
+                getActivity().finish();
 
             }
         });

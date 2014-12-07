@@ -13,10 +13,13 @@ import android.widget.Toast;
 
 public class AmountActivity extends Activity {
 
-	@Override
+    int nextstep = cardInfo.getInstance().getNextStep() ;
+
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
         initView();
+
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "HelveticaNeueLTStdBd.otf");
         Button btn=(Button) findViewById(R.id.btn_amount_number1);
@@ -29,6 +32,12 @@ public class AmountActivity extends Activity {
         btn=(Button) findViewById(R.id.btn_amount_number7); btn.setTypeface(typeface);
         btn=(Button) findViewById(R.id.btn_amount_number8); btn.setTypeface(typeface);
         btn=(Button) findViewById(R.id.btn_amount_number9); btn.setTypeface(typeface);
+        TextView tv_amount_title = (TextView) findViewById(R.id.tv_amount_title);
+        if(nextstep == cardInfo.step_action.STEP_PURCHASE.ordinal()){
+            tv_amount_title.setText("Purchase Amount");
+        }else {
+            tv_amount_title.setText("Deposit Amount");
+        }
 	}
 
 	private void initView() {
@@ -70,6 +79,7 @@ public class AmountActivity extends Activity {
             int nextstep = cardInfo.getInstance().getNextStep() ;
             if(nextstep == cardInfo.step_action.STEP_PURCHASE.ordinal()) {
                 cardInfo.getInstance().setPurchase(lval_total);
+                showToast(String.format("%d",lval_total));
             }else if(nextstep == cardInfo.step_action.STEP_DEPOSIT.ordinal()) {
                 cardInfo.getInstance().setDeposit(lval_total);
             }else if(nextstep == cardInfo.step_action.STEP_TAPCARD_WRITE_CUST_DEPOSIT.ordinal()) {
@@ -78,6 +88,7 @@ public class AmountActivity extends Activity {
 
             Intent intent = new Intent(this, TapcardActivity.class);
             startActivity(intent);
+            this.finish();
         }
         else if(v.getId() ==R.id.btn_amount_del ) {
             lval_total = lval_total / 10;
@@ -207,7 +218,7 @@ public class AmountActivity extends Activity {
 	}
 	
 	public void showToast(String str) {
-		Toast.makeText(this, str, 100).show();
+		Toast.makeText(this, str, 1000).show();
 	}
 
 }

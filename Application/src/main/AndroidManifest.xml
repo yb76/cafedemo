@@ -64,6 +64,11 @@
             android:launchMode="singleTask" >
         </activity>
         <activity
+            android:name="BalanceCustomerActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
             android:name="CustomerActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask" >

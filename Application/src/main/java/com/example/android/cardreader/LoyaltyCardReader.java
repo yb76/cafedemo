@@ -23,6 +23,7 @@ import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.IsoDep;
 import android.nfc.tech.MifareUltralight;
+import android.widget.Toast;
 
 import com.example.android.common.logger.Log;
 
@@ -118,8 +119,9 @@ public class LoyaltyCardReader implements NfcAdapter.ReaderCallback {
             try {
                 // Connect to the remote NFC device
                 mfDep.connect();
-
+                Log.i(TAG, "Connected");
                 if(nextstep == cardInfo.step_action.STEP_PURCHASE.ordinal()) {
+                    Log.i(TAG, "purchase");
                     byte[] payload = mfDep.readPages(PAGE_BAL); // 16bytes
                     long bal = 0;
                     try {
@@ -127,7 +129,8 @@ public class LoyaltyCardReader implements NfcAdapter.ReaderCallback {
                     } catch (NumberFormatException nfe) {
                         bal = 0;
                     }
-                    bal = bal - cardInfo.getInstance().getDeposit();
+                    //Log.i(TAG,  "bal ="+ bal+",purchase="+cardInfo.getInstance().getPurchase());
+                    bal = bal - cardInfo.getInstance().getPurchase();
                     if(bal < 0) {
                         bal = 0;// TODO
                     }
@@ -162,8 +165,30 @@ public class LoyaltyCardReader implements NfcAdapter.ReaderCallback {
 
                 if(nextstep == cardInfo.step_action.STEP_TAPCARD_READ.ordinal())
                 {
-                    byte[] payload = mfDep.readPages(PAGE_FIRSTNAME); // 16bytes
-                    Log.i(TAG, "pages: " + ByteArrayToHexString(payload));
+                    Log.i(TAG, "check balance");
+                    byte[] payload_fname = mfDep.readPages(PAGE_FIRSTNAME); // 16bytes
+                    byte[] payload_lname = mfDep.readPages(PAGE_LASTNAME); // 16bytes
+                    byte[] payload_email = mfDep.readPages(PAGE_EMAIL); // 16bytes
+                    byte[] payload_mobile = mfDep.readPages(PAGE_MOBILE); // 16bytes
+                    byte[] payload_bal = mfDep.readPages(PAGE_BAL); // 16bytes
+                    if(true) {
+                     //if(payload_fname.length==16&&payload_lname.length==16 &&payload_email.length==16&&payload_mobile.length==16 ) {
+                        cardInfo.getInstance().setCust( ByteArrayToAscii(payload_fname),
+                                ByteArrayToAscii(payload_lname),ByteArrayToAscii(payload_email),ByteArrayToAscii(payload_mobile)
+                        );
+                    }else{
+                        cardInfo.getInstance().setCust(" "," "," "," ");
+                    }
+                    if(payload_bal.length==16) {
+                        long bal = 0;
+                        try {
+                            bal = Long.parseLong(ByteArrayToAscii(payload_bal));
+                        } catch (NumberFormatException nfe) {
+                            bal = 0;
+                        }
+                        cardInfo.getInstance().setBal(bal);
+                    }
+                    Log.i(TAG, "pages: " + ByteArrayToAscii(payload_fname));
                 }
 
 
